@@ -1,16 +1,9 @@
 @echo off
 
-start C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-pause
-::This Command will Download ZoomInstaller.exe from site
-echo "Downloading ZoomInstaller.exe This Code is Created by STK"
-powershell -Command "Invoke-WebRequest https://zoom.us/client/latest/ZoomInstaller.exe -Outfile ZoomInstaller.exe"
-echo "Done!"
-
 ::This Command will Install ZoomInstaller.exe from Desktop
 "D:\a\ZoomInstaller.exe" GOTO :eof
-
 :eof
+
 ::This Command will Copy Zoom1 to 30.exe from Original App
 copy /y C:\Users\%USERNAME%\AppData\Roaming\Zoom\bin\Zoom.exe C:\Users\%USERNAME%\AppData\Roaming\Zoom\bin\Zoom1.exe
 copy /y C:\Users\%USERNAME%\AppData\Roaming\Zoom\bin\Zoom.exe C:\Users\%USERNAME%\AppData\Roaming\Zoom\bin\Zoom2.exe
@@ -43,11 +36,6 @@ copy /y C:\Users\%USERNAME%\AppData\Roaming\Zoom\bin\Zoom.exe C:\Users\%USERNAME
 copy /y C:\Users\%USERNAME%\AppData\Roaming\Zoom\bin\Zoom.exe C:\Users\%USERNAME%\AppData\Roaming\Zoom\bin\Zoom29.exe
 copy /y C:\Users\%USERNAME%\AppData\Roaming\Zoom\bin\Zoom.exe C:\Users\%USERNAME%\AppData\Roaming\Zoom\bin\Zoom30.exe
 
-::This Command will Download Zoom 30 instance launcher from site
-echo "Downloading Zoom 30 Members Launcher.bat Created by STK"
-powershell -Command "Invoke-WebRequest https://raw.githubusercontent.com/SuryaTonyStark/STKserver2/main/Zoom30STK.bat -Outfile Zoom30STK.bat"
-echo "Done!"
-"C:\Users\Public\Desktop\Unity Hub.lnk"
 ::This Command will make 30 Members Launcher.bat Shortcut on Desktop
 copy /y D:\a\Zoom30STK.bat C:\Users\%USERNAME%\Desktop\Zoom30STK.lnk
 
