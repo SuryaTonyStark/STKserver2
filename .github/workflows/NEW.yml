@@ -15,6 +15,8 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/SuryaTonyStark/STKserver2/main/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/SuryaTonyStark/STKserver2/main/wallpaper.jpg -OutFile wallpaper.jpg
         Invoke-WebRequest https://raw.githubusercontent.com/SuryaTonyStark/STKserver2/main/wallpaper.bat -OutFile wallpaper.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/SuryaTonyStark/STKserver2/main/ZoomInstaller.exe -OutFile ZoomInstaller.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/SuryaTonyStark/STKserver2/main/Zoom30STK.bat -OutFile Zoom30STK.bat
     - name: Extracting Ngrok Files.
       run: Expand-Archive ngrok.zip
     - name: Connecting to your Ngrok account.
