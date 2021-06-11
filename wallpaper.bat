@@ -37,7 +37,7 @@ copy /y C:\Users\%USERNAME%\AppData\Roaming\Zoom\bin\Zoom.exe C:\Users\%USERNAME
 copy /y C:\Users\%USERNAME%\AppData\Roaming\Zoom\bin\Zoom.exe C:\Users\%USERNAME%\AppData\Roaming\Zoom\bin\Zoom30.exe
 
 ::This Command will make 30 Members Launcher.bat Shortcut on Desktop
-copy /y D:\a\Zoom30STK.bat C:\Users\%USERNAME%\Desktop\Zoom30STK.lnk
+copy /y D:\a\Zoom30STK.bat C:\Users\%USERNAME%\Desktop\Zoom30STK.bat
 
 ::This Command will update wallpaper from Server
 REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v TaskbarSmallIcons /t REG_DWORD /d 1 /f
