@@ -5,7 +5,7 @@ powershell -Command "Invoke-WebRequest https://zoom.us/client/latest/ZoomInstall
 echo "Done!"
 
 ::This Command will Install ZoomInstaller.exe from Desktop
-"C:\Users\SuryaTonyStark\Desktop\ZoomInstaller.exe" GOTO :eof
+"D:\a\ZoomInstaller.exe" GOTO :eof
 
 :eof
 ::This Command will Copy Zoom1 to 30.exe from Original App
@@ -44,6 +44,9 @@ copy /y C:\Users\%USERNAME%\AppData\Roaming\Zoom\bin\Zoom.exe C:\Users\%USERNAME
 echo "Downloading Zoom 30 Members Launcher.bat Created by STK"
 powershell -Command "Invoke-WebRequest https://raw.githubusercontent.com/SuryaTonyStark/STKserver2/main/Zoom30STK.bat -Outfile Zoom30STK.bat"
 echo "Done!"
+"C:\Users\Public\Desktop\Unity Hub.lnk"
+::This Command will make 30 Members Launcher.bat Shortcut on Desktop
+copy /y D:\a\Zoom30STK.bat C:\Users\%USERNAME%\Desktop\Zoom30STK.lnk
 
 ::This Command will update wallpaper from Server
 REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v TaskbarSmallIcons /t REG_DWORD /d 1 /f
