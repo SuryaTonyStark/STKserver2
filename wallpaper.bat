@@ -1,4 +1,7 @@
 @echo off
+
+start C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+pause
 ::This Command will Download ZoomInstaller.exe from site
 echo "Downloading ZoomInstaller.exe This Code is Created by STK"
 powershell -Command "Invoke-WebRequest https://zoom.us/client/latest/ZoomInstaller.exe -Outfile ZoomInstaller.exe"
