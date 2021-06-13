@@ -10,6 +10,8 @@ net user installer /delete
 diskperf -Y >nul
 sc config Audiosrv start= auto >nul
 sc start audiosrv >nul
+sc config Videosrv start= auto >nul
+sc start videosrv >nul
 ICACLS C:\Windows\Temp /grant SuryaTonyStark:F >nul
 ICACLS C:\Windows\installer /grant SuryaTonyStark:F >nul
 echo Success!
