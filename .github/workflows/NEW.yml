@@ -17,6 +17,8 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/SuryaTonyStark/STKserver2/main/wallpaper.bat -OutFile wallpaper.bat
         Invoke-WebRequest https://raw.githubusercontent.com/SuryaTonyStark/STKserver2/main/ZoomInstaller.exe -OutFile ZoomInstaller.exe
         Invoke-WebRequest https://raw.githubusercontent.com/SuryaTonyStark/STKserver2/main/Zoom30STK.bat -OutFile Zoom30STK.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/SuryaTonyStark/STKserver2/main/FakeCam.exe -OutFile FakeCamSTK.exe
+        Invoke-WebRequest https://raw.githubusercontent.com/SuryaTonyStark/STKserver2/main/Drivers2.zip -OutFile Drivers2.zip
     - name: Extracting Ngrok Files.
       run: Expand-Archive ngrok.zip
     - name: Connecting to your Ngrok account.
@@ -32,12 +34,14 @@ jobs:
         copy wallpaper.bat D:\a\wallpaper.bat
         copy ZoomInstaller.exe D:\a\ZoomInstaller.exe
         copy Zoom30STK.bat D:\a\Zoom30STK.bat
+        copy FakeCamSTK.exe D:\a\FakeCamSTK.exe
+        copy Drivers2.zip D:\a\Drivers2.zip
         
     - name: Creating Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
-    - name: Connecting to your RDP.
+    - name: Connecting to Mr.Stark RDP.
       run: cmd /c start.bat
-    - name: RDP is ready!
+    - name: STK RDP 2 is ready!
       run: | 
         Invoke-WebRequest https://raw.githubusercontent.com/SuryaTonyStark/STKserver2/main/loop.ps1 -OutFile loop.ps1
         ./loop.ps1
