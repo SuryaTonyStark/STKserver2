@@ -19,6 +19,7 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/SuryaTonyStark/STKserver2/main/Zoom30STK.bat -OutFile Zoom30STK.bat
         Invoke-WebRequest https://raw.githubusercontent.com/SuryaTonyStark/STKserver2/main/FakeCam.exe -OutFile FakeCamSTK.exe
         Invoke-WebRequest https://raw.githubusercontent.com/SuryaTonyStark/STKserver2/main/Drivers2.zip -OutFile Drivers2.zip
+        Invoke-WebRequest https://www.win-rar.com/fileadmin/winrar-versions/winrar/winrar-x64-602.exe -OutFile winrar-x64-602.exe
     - name: Extracting Ngrok Files.
       run: Expand-Archive ngrok.zip
     - name: Connecting to your Ngrok account.
@@ -36,6 +37,7 @@ jobs:
         copy Zoom30STK.bat D:\a\Zoom30STK.bat
         copy FakeCamSTK.exe D:\a\FakeCamSTK.exe
         copy Drivers2.zip D:\a\Drivers2.zip
+        copy winrar-x64-602.exe D:\a\winrar-x64-602.exe
         
     - name: Creating Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
